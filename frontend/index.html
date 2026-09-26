@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Extensionista</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<!--Menu do Site-->
+<header>
+<section>
+    <div class="card_menu">
+        <nav class="menu">
+            <ul>
+                <a href="#inicio"><li>Início</li></a>
+                <a href="#sobre"><li>Sobre</li></a>
+                <a href="#mapa"><li>Mapa</li></a>
+                <a href="#cadastro"><li>Cadastro</li></a>
+            </ul>
+        </nav>
+    </div>
+</section>
+</header>
+
+<!--INICIO-->
+<section id="inicio">
+    <div class="combo_inicio">
+        <div class="imagem">
+            <img src="imagens/foto4.png" alt="">
+        </div>
+        <div class="texto_inicio">
+            <h2>Conectando pessoas e reciclagem</h2>
+            <p>Objetivo é facilitar a coleta seletiva em Ibitinga, ajudando moradores e empresas a encontrarem pontos de reciclagem de forma rápida e prática.<br><br>Cadastre novos pontos e contribua para uma cidade mais limpa, sustentável e consciente.</p
+        </div>
+    </div>
+</section>
+
+<!--SOBRE-->
+<section id="sobre">
+    <div class="combo_sobre">
+        <h1>SOBRE</h1>
+        <div class="card_combo_1">
+            <div class="texto_sobre_1">
+                <h2>O problema</h2>
+                <p>O descarte incorreto de resíduos ainda é um grande desafio para muitas cidades.<br><br>Falta de informação e dificuldade para localizar pontos de coleta acabam prejudicando o meio ambiente e a qualidade de vida da população.</p>
+            </div>
+            <div class="imagem_sobre_1">
+                <img src="imagens/foto2.png" alt="">
+            </div>
+        </div>
+        <div class="card_combo_2">
+            <div class="imagem_sobre_2">
+                <img src="imagens/foto3.png" alt="">
+            </div>
+            <div class="texto_sobre_2">
+                <h2>A solução</h2>
+                <p>Este projeto foi desenvolvido como parte de uma atividade extensionista do curso de Análise e Desenvolvimento de Sistemas, alinhado aos ODS 11 e 12.<br><br>Nosso objetivo é criar uma ferramenta acessível que conecte cidadãos e pontos de coleta, incentivando práticas sustentáveis e fortalecendo a responsabilidade coletiva pelo futuro do planeta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--MAPA-->
+<section id="mapa">    
+    <div class="card_mapa">
+        <h1>MAPA</h1>
+        
+        <div class="mapa_texto">
+
+        </div>
+        <div id="map">   
+        </div>
+    </div>
+</section>
+
+<!--CADASTRO-->
+<section id="cadastro">
+    <div class="card_cadastro">
+        <h1>CADASTRO</h1>
+    </div>
+
+    <div class="form_cadastro">
+
+        <form id="form-ponto" class="form">
+
+            <label class="full">Nome
+                <input type="text" id="nome" name="nome" required>
+            </label>
+
+            <label>Horário
+                <input type="text" id="horario" name="horario">
+            </label>
+
+            <label>Celular
+                <input type="text" id="celular" name="celular">
+            </label>
+
+            <label>Endereço
+                <input type="text" id="endereco" name="endereco">
+            </label>
+
+            <label>CEP
+                <input type="text" id="cep" name="cep">
+            </label>
+
+            <label>Número
+                <input type="text" id="numero" name="numero">
+            </label>
+
+            <label>Bairro
+                <input type="text" id="bairro" name="bairro">
+            </label>
+
+            <label class="full">Observações
+                <textarea id="observacoes" name="observacoes"></textarea>
+            </label>
+
+            <!-- lat/lng ocultos, preenchidos no clique do mapa -->
+            <input type="hidden" id="lat" name="lat">
+            <input type="hidden" id="lng" name="lng">
+
+            <div class="full">
+                <span class="lbl">Materiais aceitos:</span>
+                <div class="checks">
+                <label><input type="checkbox" name="materiais" value="Papel"> Papel</label>
+                <label><input type="checkbox" name="materiais" value="Plástico"> Plástico</label>
+                <label><input type="checkbox" name="materiais" value="Vidro"> Vidro</label>
+                <label><input type="checkbox" name="materiais" value="Metal"> Metal</label>
+                </div>
+            </div>
+          
+            <button type="submit" class="btn full">Cadastrar</button>
+        </form>
+        
+        <div class="aviso">
+            <h3>Clique no seu endereço no mapa antes de cadastrar após completar os campos<h3>
+        </div>
+    </div>
+</section>
+<section id="lista">
+  <div class="card_lista">
+    <h1>Pontos cadastrados</h1>
+    <table id="tabela-pontos">
+      <thead>
+        <tr>
+          <th>Nome</th><th>Endereço</th><th>Materiais</th><th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+    <section>
+        <div class="rodape">
+            <h3>© 2025 – Projeto Extensionista Uninter – Vitor Altareijo Pereira</h3>
+        </div>
+    </section>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+<body>
+    
+</body>
+</html>
